@@ -1,5 +1,5 @@
 // TODO: loom
-use crate::sync::Sender;
+use crate::Sender;
 use futures::future::poll_fn;
 use tokio::sync::mpsc::channel;
 
