@@ -427,11 +427,6 @@
 //!   bounding of any kind.
 
 cfg_sync! {
-    mod barrier;
-    pub use barrier::{Barrier, BarrierWaitResult};
-
-    pub mod broadcast;
-
     pub mod mpsc;
 
     mod mutex;
@@ -453,32 +448,4 @@ cfg_sync! {
     pub(crate) use task::AtomicWaker;
 
     pub mod watch;
-}
-
-cfg_not_sync! {
-    #[cfg(any(feature = "fs", feature = "signal", all(unix, feature = "process")))]
-    pub(crate) mod batch_semaphore;
-
-    cfg_fs! {
-        mod mutex;
-        pub(crate) use mutex::Mutex;
-    }
-
-    #[cfg(any(feature = "rt", feature = "signal", all(unix, feature = "process")))]
-    pub(crate) mod notify;
-
-    cfg_atomic_waker_impl! {
-        mod task;
-        pub(crate) use task::AtomicWaker;
-    }
-
-    #[cfg(any(
-            feature = "rt",
-            feature = "process",
-            feature = "signal"))]
-    pub(crate) mod oneshot;
-
-    cfg_signal_internal! {
-        pub(crate) mod mpsc;
-    }
 }
