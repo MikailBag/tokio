@@ -24,44 +24,15 @@ categories = ["asynchronous", "network-programming"]
 keywords = ["io", "async", "non-blocking", "futures"]
 
 [features]
-# Include nothing by default
 default = []
-
-
-fs = []
-io-util = ["memchr", "bytes"]
-# stdin, stdout, stderr
-io-std = []
-stream = ["futures-core"]
 sync = []
-time = []
 
 [dependencies]
 pin-project-lite = "0.1.1"
 
 # Everything else is optional...
-bytes = { version = "0.6.0", optional = true }
 futures-core = { version = "0.3.0", optional = true }
-lazy_static = { version = "1.0.2", optional = true }
-memchr = { version = "2.2", optional = true }
-mio = { version = "0.7.5", optional = true }
-num_cpus = { version = "1.8.0", optional = true }
-parking_lot = { version = "0.11.0", optional = true } # Not in full
-slab = { version = "0.4.1", optional = true }
-tracing = { version = "0.1.21", default-features = false, features = ["std"], optional = true } # Not in full
 
-[target.'cfg(unix)'.dependencies]
-libc = { version = "0.2.42", optional = true }
-signal-hook-registry = { version = "1.1.1", optional = true }
-
-[target.'cfg(unix)'.dev-dependencies]
-libc = { version = "0.2.42" }
-nix = { version = "0.18.0" }
-
-[target.'cfg(windows)'.dependencies.winapi]
-version = "0.3.8"
-default-features = false
-optional = true
 
 [dev-dependencies]
 futures = { version = "0.3.0", features = ["async-await"] }
