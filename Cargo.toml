@@ -8,7 +8,6 @@ members = [
 
   # Internal
   "benches",
-  "examples",
   "tests-build",
   "tests-integration",
 ]
