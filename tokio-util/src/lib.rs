@@ -21,18 +21,7 @@
 //!
 //! [`tokio`]: https://docs.rs/tokio
 
-#[macro_use]
-mod cfg;
-
 mod loom;
 
-cfg_codec! {
-    pub mod codec;
-}
 
 pub mod sync;
-
-pub mod either;
-
-#[cfg(feature = "time")]
-pub mod time;
