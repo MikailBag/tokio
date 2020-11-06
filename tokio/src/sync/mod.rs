@@ -426,21 +426,14 @@
 //!   critical section. Semaphores are useful for implementing limiting or
 //!   bounding of any kind.
 
-cfg_sync! {
-    pub mod mpsc;
+pub mod mpsc;
 
-    mod mutex;
-    pub use mutex::{Mutex, MutexGuard, TryLockError, OwnedMutexGuard};
+mod mutex;
+pub(crate) mod notify;
+pub mod oneshot;
 
-    pub(crate) mod notify;
-    pub use notify::Notify;
+pub(crate) mod batch_semaphore;
+mod semaphore;
 
-    pub mod oneshot;
-
-    pub(crate) mod batch_semaphore;
-    mod semaphore;
-    pub use semaphore::{Semaphore, SemaphorePermit, OwnedSemaphorePermit};
-
-    mod task;
-    pub(crate) use task::AtomicWaker;
-}
+mod task;
+pub(crate) use task::AtomicWaker;
