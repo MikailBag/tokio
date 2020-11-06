@@ -428,9 +428,7 @@
 
 pub mod mpsc;
 
-mod mutex;
 pub(crate) mod notify;
-pub mod oneshot;
 
 pub(crate) mod batch_semaphore;
 mod semaphore;
