@@ -1,15 +1,9 @@
-use std::future::Future;
-
-cfg_rt! {
-    pub(crate) fn block_on<F: Future>(f: F) -> F::Output {
-        let mut e = crate::runtime::enter::enter(false);
-        e.block_on(f).unwrap()
-    }
-}
-
-cfg_not_rt! {
-    pub(crate) fn block_on<F: Future>(f: F) -> F::Output {
-        let mut park = crate::park::thread::CachedParkThread::new();
-        park.block_on(f).unwrap()
+pub(crate) fn block_on<F: std::future::Future>(fut: F) -> F::Output {
+    crate::pin!(fut);
+    let mut cx = std::task::Context::from_waker(futures_util::task::noop_waker_ref());
+    loop {
+        if let std::task::Poll::Ready(r) = fut.as_mut().poll(&mut cx) {
+            return r;
+        }
     }
 }

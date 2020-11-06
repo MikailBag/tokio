@@ -482,7 +482,3 @@ cfg_not_sync! {
         pub(crate) mod mpsc;
     }
 }
-
-/// Unit tests
-#[cfg(test)]
-mod tests;
