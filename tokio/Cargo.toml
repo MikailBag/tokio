@@ -27,70 +27,16 @@ keywords = ["io", "async", "non-blocking", "futures"]
 # Include nothing by default
 default = []
 
-# enable everything
-full = [
-  "fs",
-  "io-util",
-  "io-std",
-  "macros",
-  "net",
-  "parking_lot",
-  "process",
-  "rt",
-  "rt-multi-thread",
-  "signal",
-  "stream",
-  "sync",
-  "time",
-]
 
 fs = []
 io-util = ["memchr", "bytes"]
 # stdin, stdout, stderr
 io-std = []
-macros = ["tokio-macros"]
-net = [
-  "lazy_static",
-  "libc",
-  "mio/os-poll",
-  "mio/os-util",
-  "mio/tcp",
-  "mio/udp",
-  "mio/uds",
-]
-process = [
-  "bytes",
-  "lazy_static",
-  "libc",
-  "mio/os-poll",
-  "mio/os-util",
-  "mio/uds",
-  "signal-hook-registry",
-  "winapi/threadpoollegacyapiset",
-]
-# Includes basic task execution capabilities
-rt = ["slab"]
-rt-multi-thread = [
-  "num_cpus",
-  "rt",
-]
-signal = [
-  "lazy_static",
-  "libc",
-  "mio/os-poll",
-  "mio/uds",
-  "mio/os-util",
-  "signal-hook-registry",
-  "winapi/consoleapi",
-]
 stream = ["futures-core"]
 sync = []
-test-util = []
 time = []
 
 [dependencies]
-tokio-macros = { version = "0.3.0", path = "../tokio-macros", optional = true }
-
 pin-project-lite = "0.1.1"
 
 # Everything else is optional...
@@ -118,7 +64,6 @@ default-features = false
 optional = true
 
 [dev-dependencies]
-tokio-test = { version = "0.3.0", path = "../tokio-test" }
 futures = { version = "0.3.0", features = ["async-await"] }
 proptest = "0.9.4"
 tempfile = "3.1.0"

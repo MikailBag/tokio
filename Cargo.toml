@@ -2,12 +2,5 @@
 
 members = [
   "tokio",
-  "tokio-macros",
-  "tokio-test",
   "tokio-util",
-
-  # Internal
-  "benches",
-  "tests-build",
-  "tests-integration",
 ]
