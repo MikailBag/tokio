@@ -33,16 +33,6 @@ cfg_process! {
     pub mod process;
 }
 
-#[cfg(any(feature = "net", feature = "fs", feature = "io-std"))]
-mod blocking;
-
-cfg_rt! {
-    pub mod runtime;
-}
-
-cfg_signal! {
-    pub mod signal;
-}
 
 cfg_signal_internal! {
     #[cfg(not(feature = "signal"))]
@@ -51,21 +41,10 @@ cfg_signal_internal! {
     pub(crate) mod signal;
 }
 
-cfg_stream! {
-    pub mod stream;
-}
-
 cfg_sync! {
     pub mod sync;
 }
-cfg_not_sync! {
-    mod sync;
-}
 
-pub mod task;
-cfg_rt! {
-    pub use task::spawn;
-}
 
 cfg_time! {
     pub mod time;
