@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608224745293,
+  "lastUpdate": 1608224779813,
   "repoUrl": "https://github.com/MikailBag/tokio",
   "entries": {
     "rt_multi_threaded": [
@@ -181,6 +181,90 @@ window.BENCHMARK_DATA = {
             "name": "uncontented_unbounded",
             "value": 810510,
             "range": "± 25444",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "luciofranco14@gmail.com",
+            "name": "Lucio Franco",
+            "username": "LucioFranco"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c5861ef62fb0c1ed6bb8fe07a8e02534264eb7b8",
+          "message": "docs: Add more comprehensive stream docs (#3286)\n\n* docs: Add more comprehensive stream docs\r\n\r\n* Apply suggestions from code review\r\n\r\nCo-authored-by: Alice Ryhl <alice@ryhl.io>\r\n\r\n* Fix doc tests\r\n\r\nCo-authored-by: Alice Ryhl <alice@ryhl.io>",
+          "timestamp": "2020-12-17T11:46:09-05:00",
+          "tree_id": "f7afa84006c8629a0d2c058b8e52042c54436203",
+          "url": "https://github.com/MikailBag/tokio/commit/c5861ef62fb0c1ed6bb8fe07a8e02534264eb7b8"
+        },
+        "date": 1608224778979,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "contention_bounded",
+            "value": 6750134,
+            "range": "± 2541536",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_bounded_full",
+            "value": 6450508,
+            "range": "± 1463587",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_unbounded",
+            "value": 6208593,
+            "range": "± 2177125",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_000_medium",
+            "value": 703,
+            "range": "± 76",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_medium",
+            "value": 668,
+            "range": "± 72",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_1_medium",
+            "value": 704,
+            "range": "± 74",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_large",
+            "value": 79279,
+            "range": "± 6655",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_medium",
+            "value": 1412,
+            "range": "± 223",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_bounded",
+            "value": 1090788,
+            "range": "± 55888",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_unbounded",
+            "value": 783629,
+            "range": "± 53263",
             "unit": "ns/iter"
           }
         ]
