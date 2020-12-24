@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608813489969,
+  "lastUpdate": 1608813493781,
   "repoUrl": "https://github.com/MikailBag/tokio",
   "entries": {
     "rt_multi_threaded": [
@@ -587,6 +587,60 @@ window.BENCHMARK_DATA = {
             "name": "read_uncontended",
             "value": 600,
             "range": "± 142",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@carllerche.com",
+            "name": "Carl Lerche",
+            "username": "carllerche"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0deaeb84948f253b76b7fe64d7fe9d4527cd4275",
+          "message": "chore: remove unused `slab` dependency (#3318)",
+          "timestamp": "2020-12-22T21:56:22-08:00",
+          "tree_id": "3b9ad84403d71b2ad5d2c749c23516c3dfaec3ce",
+          "url": "https://github.com/MikailBag/tokio/commit/0deaeb84948f253b76b7fe64d7fe9d4527cd4275"
+        },
+        "date": 1608813491832,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "read_concurrent_contended",
+            "value": 869,
+            "range": "± 137",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_contended_multi",
+            "value": 14562,
+            "range": "± 4212",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended",
+            "value": 937,
+            "range": "± 146",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended_multi",
+            "value": 14103,
+            "range": "± 3346",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_uncontended",
+            "value": 533,
+            "range": "± 56",
             "unit": "ns/iter"
           }
         ]
