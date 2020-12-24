@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1608813493781,
+  "lastUpdate": 1608813512778,
   "repoUrl": "https://github.com/MikailBag/tokio",
   "entries": {
     "rt_multi_threaded": [
@@ -313,6 +313,90 @@ window.BENCHMARK_DATA = {
             "name": "uncontented_unbounded",
             "value": 783629,
             "range": "± 53263",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@carllerche.com",
+            "name": "Carl Lerche",
+            "username": "carllerche"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0deaeb84948f253b76b7fe64d7fe9d4527cd4275",
+          "message": "chore: remove unused `slab` dependency (#3318)",
+          "timestamp": "2020-12-22T21:56:22-08:00",
+          "tree_id": "3b9ad84403d71b2ad5d2c749c23516c3dfaec3ce",
+          "url": "https://github.com/MikailBag/tokio/commit/0deaeb84948f253b76b7fe64d7fe9d4527cd4275"
+        },
+        "date": 1608813511918,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "contention_bounded",
+            "value": 6818616,
+            "range": "± 3271442",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_bounded_full",
+            "value": 6543785,
+            "range": "± 1587185",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "contention_unbounded",
+            "value": 6359306,
+            "range": "± 2096494",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_000_medium",
+            "value": 664,
+            "range": "± 35",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_100_medium",
+            "value": 661,
+            "range": "± 41",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "create_1_medium",
+            "value": 661,
+            "range": "± 21",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_large",
+            "value": 85711,
+            "range": "± 5836",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "send_medium",
+            "value": 1389,
+            "range": "± 103",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_bounded",
+            "value": 1116094,
+            "range": "± 28778",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "uncontented_unbounded",
+            "value": 810432,
+            "range": "± 37427",
             "unit": "ns/iter"
           }
         ]
