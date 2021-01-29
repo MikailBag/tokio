@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611908826263,
+  "lastUpdate": 1611908829688,
   "repoUrl": "https://github.com/MikailBag/tokio",
   "entries": {
     "rt_multi_threaded": [
@@ -191,6 +191,54 @@ window.BENCHMARK_DATA = {
             "name": "yield_many",
             "value": 18615479,
             "range": "± 2611549",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ivanppetkov@gmail.com",
+            "name": "Ivan Petkov",
+            "username": "ipetkov"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1f9765fb5f3a9d461c50124ac3e3f52c4901fc06",
+          "message": "process: add missing drop child stdin to wait() (#3421)",
+          "timestamp": "2021-01-28T23:08:44+01:00",
+          "tree_id": "b76f705bf1718a1ed3f146dd3e27bdb1209e1e64",
+          "url": "https://github.com/MikailBag/tokio/commit/1f9765fb5f3a9d461c50124ac3e3f52c4901fc06"
+        },
+        "date": 1611908828583,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "chained_spawn",
+            "value": 207707,
+            "range": "± 49809",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "ping_pong",
+            "value": 742193,
+            "range": "± 102011",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "spawn_many",
+            "value": 5163774,
+            "range": "± 978107",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "yield_many",
+            "value": 21111701,
+            "range": "± 2251746",
             "unit": "ns/iter"
           }
         ]
