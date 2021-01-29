@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611908829688,
+  "lastUpdate": 1611908835344,
   "repoUrl": "https://github.com/MikailBag/tokio",
   "entries": {
     "rt_multi_threaded": [
@@ -1151,6 +1151,60 @@ window.BENCHMARK_DATA = {
             "name": "read_uncontended",
             "value": 490,
             "range": "± 10",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ivanppetkov@gmail.com",
+            "name": "Ivan Petkov",
+            "username": "ipetkov"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1f9765fb5f3a9d461c50124ac3e3f52c4901fc06",
+          "message": "process: add missing drop child stdin to wait() (#3421)",
+          "timestamp": "2021-01-28T23:08:44+01:00",
+          "tree_id": "b76f705bf1718a1ed3f146dd3e27bdb1209e1e64",
+          "url": "https://github.com/MikailBag/tokio/commit/1f9765fb5f3a9d461c50124ac3e3f52c4901fc06"
+        },
+        "date": 1611908834447,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "read_concurrent_contended",
+            "value": 1009,
+            "range": "± 160",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_contended_multi",
+            "value": 17879,
+            "range": "± 8463",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended",
+            "value": 1078,
+            "range": "± 214",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_concurrent_uncontended_multi",
+            "value": 18893,
+            "range": "± 8390",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "read_uncontended",
+            "value": 590,
+            "range": "± 87",
             "unit": "ns/iter"
           }
         ]
