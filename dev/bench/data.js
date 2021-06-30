@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1611908835344,
+  "lastUpdate": 1625073690633,
   "repoUrl": "https://github.com/MikailBag/tokio",
   "entries": {
     "rt_multi_threaded": [
@@ -239,6 +239,54 @@ window.BENCHMARK_DATA = {
             "name": "yield_many",
             "value": 21111701,
             "range": "± 2251746",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "te316e89@gmail.com",
+            "name": "Taiki Endo",
+            "username": "taiki-e"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "08ed41f339e345286f26bdbc6c67bf9f2975ed07",
+          "message": "chore: fix typos (#3907)",
+          "timestamp": "2021-07-01T02:06:56+09:00",
+          "tree_id": "a0e5c3a7c969cccb9f4c40b485eb3856b4c52fe9",
+          "url": "https://github.com/MikailBag/tokio/commit/08ed41f339e345286f26bdbc6c67bf9f2975ed07"
+        },
+        "date": 1625073689837,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "chained_spawn",
+            "value": 204770,
+            "range": "± 22953",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "ping_pong",
+            "value": 716226,
+            "range": "± 69212",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "spawn_many",
+            "value": 5625215,
+            "range": "± 716213",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "yield_many",
+            "value": 20652932,
+            "range": "± 5298917",
             "unit": "ns/iter"
           }
         ]
